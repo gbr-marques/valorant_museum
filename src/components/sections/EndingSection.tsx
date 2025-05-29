@@ -4,7 +4,7 @@ import { Button } from "primereact/button";
 const EndingSection = () => {
   return (
     <section
-      className="p-8 pb-0 flex flex-col gap-5 bg-gradient-to-r"
+      className="p-8 md:pt-[3rem] pb-0 flex flex-col items-center gap-6 bg-gradient-to-r"
       style={
         {
           "--tw-gradient-from": "var(--light-steel)",
@@ -23,7 +23,7 @@ const EndingSection = () => {
           lectus consectetur
         </p>
       </div>
-      <Image height={300} width={300} src={"/img/jett.png"} alt={`Valorant's Agent Jett`}/>
+      <Image height={300} width={500} src={"/img/jett.png"} alt={`Valorant's Agent Jett`}/>
     </section>
   );
 };

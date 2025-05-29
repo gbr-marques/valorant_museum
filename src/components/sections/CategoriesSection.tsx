@@ -12,11 +12,11 @@ const CategoriesSection = () => {
   };
 
   return (
-    <section className="bg-[var(--off-white)] p-8 min-h-fit flex flex-col justify-end gap-6 text-center">
+    <section className="bg-[var(--off-white)] p-8 md:py-[3rem] min-h-fit flex flex-col justify-end gap-6 text-center">
       <h1 className="text-2xl">Explore different categories</h1>
-      <div className="flex gap-5 flex-wrap justify-between">
+      <div className="flex flex-wrap justify-center gap-5 md:gap-10">
         {categories.map((category) => (
-          <Link className="w-[46%]" href={`/categories/${category.slug}`}>
+          <Link className="w-fit" href={`/categories/${category.slug}`}>
             <Card className="bg-[var(--light-steel)]! rounded-2xl! [&>div>div]:p-0!">
               <div className="flex flex-col gap-4">
                 <Image
