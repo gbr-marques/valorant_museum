@@ -15,7 +15,7 @@ Uma wiki interativa desenvolvida com **Next.js**, baseada na <a href="https://va
 
 1. Clone o repositório
 
-```git clone https://github.com/gbr-marques/valorant_museum.git```
+```git clone https://github.com/gbr-marques/valorant_museum.git```\
 ```cd valorant_museum```
 
 2. Instale as dependências
