@@ -3,8 +3,8 @@ import { Carousel } from "primereact/carousel";
 
 const AgentsSection = () => {
   return (
-    <section className="bg-[var(--off-white)] p-8 min-h-fit flex flex-col justify-end gap-6 text-center">
-      <div className="flex flex-col items-center gap-6">
+    <section className="bg-[var(--off-white)] p-8 min-h-[70dvh] flex flex-col justify-center gap-6 text-center">
+      <div className="flex flex-col items-center gap-10">
         <div className="w-70">
           <span className="text-6xl rubik font-bold">25</span>
           <p>milhões de jogadores ativos mensalmente em 2025</p>
