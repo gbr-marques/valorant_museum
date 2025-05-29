@@ -16,7 +16,7 @@ const CategoriesSection = () => {
       <h1 className="text-2xl">Explore different categories</h1>
       <div className="flex flex-wrap justify-center gap-5 md:gap-10">
         {categories.map((category) => (
-          <Link className="w-fit" href={`/categories/${category.slug}`}>
+          <Link className="w-fit lg:w-[200px]" href={`/categories/${category.slug}`}>
             <Card className="bg-[var(--light-steel)]! rounded-2xl! [&>div>div]:p-0!">
               <div className="flex flex-col gap-4">
                 <Image

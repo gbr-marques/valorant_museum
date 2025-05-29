@@ -72,10 +72,10 @@ const AppHeader = () => {
   //   ];
 
   return (
-    <nav className="w-full flex items-center justify-center absolute h-fit p-8">
+    <nav className="w-full flex items-center justify-center lg:justify-start absolute h-fit p-8">
       <Image
-        className="max-h-[60px]"
-        width={300}
+        className="max-h-[60px] lg:w-[200px]"
+        width={100}
         height={100}
         src={"/img/app_logo.svg"}
         alt="Valorant Museum logo"
