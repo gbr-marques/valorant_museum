@@ -35,6 +35,7 @@ A lista de categorias está armazenada no arquivo ```src/data/categories.ts```. 
 ## 📌 To-dos
 
 - Página de listagem de itens por categoria
+- Quiz para testar o conhecimento dos usuários
 - Página de detalhe individual de item
 - Adição de animações e transições
 - Responsividade completa
