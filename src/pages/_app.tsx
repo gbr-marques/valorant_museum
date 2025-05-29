@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import "primereact/resources/themes/lara-light-blue/theme.css";
+import "primereact/resources/themes/lara-light-pink/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import type { AppProps } from "next/app";

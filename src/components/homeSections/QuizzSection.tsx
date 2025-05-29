@@ -3,15 +3,15 @@ import { Button } from "primereact/button";
 
 const QuizzSection = () => {
   return (
-    <section className="bg-red-50 p-8 flex flex-col">
+    <section className="p-8 flex flex-col bg-[var(--bright-red)]">
       <Image></Image>
-      <div className="flex flex-col gap-3 text-center">
-        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-        <p>
+      <div className="flex flex-col gap-3 text-center ">
+        <h1 className="text-2xl text-white!">Lorem ipsum dolor sit amet consectetur.</h1>
+        <p className="text-white!">
           Lorem ipsum dolor sit amet consectetur. In mi amet donec curabitur
           lectus consectetur{" "}
         </p>
-        <Button></Button>
+        <Button className="bg-[var(--light-steel)]!" label="Take quiz" raised></Button>
       </div>
     </section>
   );
