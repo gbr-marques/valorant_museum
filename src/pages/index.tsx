@@ -1,8 +1,8 @@
-import BigNumbers from "@/components/homeSections/BigNumbersSection";
-import CategoriesSection from "@/components/homeSections/CategoriesSection";
-import EndingSection from "@/components/homeSections/EndingSection";
-import HeroSection from "@/components/homeSections/HeroSection";
-import QuizzSection from "@/components/homeSections/QuizzSection";
+import BigNumbers from "@/components/sections/BigNumbersSection";
+import CategoriesSection from "@/components/sections/CategoriesSection";
+import EndingSection from "@/components/sections/EndingSection";
+import HeroSection from "@/components/sections/HeroSection";
+import QuizzSection from "@/components/sections/QuizzSection";
 
 export default function Home() {
   return (
