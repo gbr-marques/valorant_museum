@@ -72,14 +72,16 @@ const AppHeader = () => {
   //   ];
 
   return (
-    <nav className="w-full flex items-center justify-center lg:justify-start absolute h-fit p-8">
-      <Image
-        className="max-h-[60px] lg:w-[200px]"
-        width={100}
-        height={100}
-        src={"/img/app_logo.svg"}
-        alt="Valorant Museum logo"
-      ></Image>
+    <nav className="w-full flex items-center justify-center lg:justify-start xl:justify-center absolute h-fit p-8">
+      <div className="lg:w-full lg:max-w-[1000px]">
+        <Image
+          className="max-h-[60px] lg:w-[200px]"
+          width={100}
+          height={100}
+          src={"/img/app_logo.svg"}
+          alt="Valorant Museum logo"
+        ></Image>
+      </div>
     </nav>
   );
 };
