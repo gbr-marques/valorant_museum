@@ -12,8 +12,8 @@ const categoryPage = () => {
   );
 
   return (
-    <section className="min-h-[90dvh] bg-red-50 p-6">
-      <Card className="flex flex-col items-center text-center">
+    <section className="min-h-[90dvh] bg-red-50 p-6 pt-22 bg-[url('/img/bg/plain_bg.png')] bg-cover bg-center flex flex-col justify-center items-center">
+      <Card className="flex flex-col items-center text-center w-[90dvw] h-[2000px]">
         <h1 className="text-2xl">{selectedCategory?.name}</h1>
       </Card>
     </section>
