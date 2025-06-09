@@ -14,7 +14,7 @@ const ItemCard = ({ item, type }) => {
             alt="a"
           />
         </div>
-        <h3>{item.displayName}</h3>
+        <h3 className="rubik text-center">{item.displayName}</h3>
         <Button
           className="w-full bg-[var(--light-steel)]! text-sm!"
           label="See more"
