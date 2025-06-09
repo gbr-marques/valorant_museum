@@ -3,7 +3,7 @@ import { Carousel } from "primereact/carousel";
 
 const AgentsSection = () => {
   return (
-    <section className="bg-[var(--off-white)] p-8 min-h-fit lg:max-h-[292px] flex justify-center items-center gap-2 text-center">
+    <section className="bg-[var(--off-white)] p-8 lg:py-16 min-h-fit lg:max-h-[292px] flex justify-center items-center gap-2 text-center">
       <div className="bg-[var(--bright-red)] h-[150px] min-w-[3px]"></div>
       <div className="w-fit max-w-[90%] h-fit p-5 md:p-8 flex flex-col md:flex-row items-center gap-8 lg:gap-2 border-[1rem] border-[var(--bright-red)]">
         <div className="w-70 md:w-[30] max-w-fit ">

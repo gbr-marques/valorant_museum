@@ -12,7 +12,7 @@ const CategoriesSection = () => {
   };
 
   return (
-    <section className="bg-[var(--off-white)] p-8 md:py-[3rem] min-h-fit flex justify-center text-center">
+    <section className="bg-[var(--off-white)] p-8 md:py-[3rem] lg:py-16 min-h-fit flex justify-center text-center">
       <div className="max-w-[1000px] flex flex-col justify-end gap-6">
         <h1 className="text-2xl">Explore different categories</h1>
         <div className="flex flex-wrap justify-center gap-5 md:gap-10">
