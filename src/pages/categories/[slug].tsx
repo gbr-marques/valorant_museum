@@ -32,20 +32,7 @@ const categoryPage = () => {
       <div className="bg-white w-full p-4 flex flex-col gap-3 rounded-xl items-center justify-center  ">
         <h1 className="text-2xl">{selectedCategory?.name}</h1>
         <div className="w-full grid grid-cols-2 gap-x-4 justify-between">
-          <Card className="bg-gray-200! [&>div>div]:p-0! rounded-xl!">
-            <div className="flex flex-col gap-3 items-center">
-              <img
-                src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png"
-                className="bg-red-50 rounded-sm"
-                alt=""
-              />
-              <h3>Name</h3>
-              <Button
-                className="w-full bg-[var(--bright-red)]! text-sm! rubik!"
-                label="See more"
-              ></Button>
-            </div>
-          </Card>
+          
         </div>
       </div>
     </section>
