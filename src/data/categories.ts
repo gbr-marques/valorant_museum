@@ -31,9 +31,9 @@ export type Category = {
       slug: 'playercards',
     },
     {
-      name: 'Tiers',
+      name: 'Competitive Tiers',
       icon: '/icons/tiers.png',
-      slug: 'tiers',
+      slug: 'competitivetiers',
     },
     {
       name: 'Sprays',
