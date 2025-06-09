@@ -1,7 +1,10 @@
+import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 
 const ItemCard = ({ item, type }) => {
+  const router = useRouter();
+
   return (
     <Card className="bg-gray-200! [&>div>div]:p-0! rounded-2xl! w-[150px]">
       <div className="flex flex-col gap-3 items-center">
@@ -18,6 +21,7 @@ const ItemCard = ({ item, type }) => {
         <Button
           className="w-full bg-[var(--light-steel)]! text-sm!"
           label="See more"
+          onClick={() => router.push(`${type}/${item.uuid}`)}
         ></Button>
       </div>
     </Card>
