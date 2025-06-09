@@ -29,7 +29,7 @@ const categoryPage = () => {
 
   return (
     <section className="min-h-[90dvh] bg-red-50 p-6 pt-22 bg-[url('/img/bg/plain_bg.png')] bg-cover bg-center flex flex-col justify-center items-center">
-      <div className="bg-white w-full p-4 flex flex-col col rounded-xl items-center justify-center  ">
+      <div className="bg-white w-full p-4 flex flex-col gap-3 rounded-xl items-center justify-center  ">
         <h1 className="text-2xl">{selectedCategory?.name}</h1>
         <div className="w-full grid grid-cols-2 gap-x-4 justify-between">
           <Card className="bg-gray-200! [&>div>div]:p-0! rounded-xl!">
@@ -41,7 +41,7 @@ const categoryPage = () => {
               />
               <h3>Name</h3>
               <Button
-                className="w-full bg-[var(--bright-red)]! text-sm!"
+                className="w-full bg-[var(--bright-red)]! text-sm! rubik!"
                 label="See more"
               ></Button>
             </div>
