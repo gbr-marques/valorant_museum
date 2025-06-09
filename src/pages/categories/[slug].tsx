@@ -28,10 +28,10 @@ const categoryPage = () => {
   );
 
   return (
-    <section className="min-h-[90dvh] bg-red-50 p-6 pt-22 bg-[url('/img/bg/plain_bg.png')] bg-cover bg-center flex flex-col justify-center items-center">
-      <div className="bg-white w-full p-4 flex flex-col gap-6 rounded-3xl items-center justify-center  ">
+    <section className="min-h-[90dvh] bg-red-50 p-6 lg:p-12 pt-22 lg:pt-30 bg-[url('/img/bg/plain_bg.png')] bg-cover bg-center flex flex-col justify-center items-center">
+      <div className="bg-white w-full lg:w-[1000px]   p-4 lg:p-8 flex flex-col gap-6  rounded-3xl items-center justify-center  ">
         <h1 className="text-2xl rubik">{selectedCategory?.name}</h1>
-        <div className="w-full grid grid-cols-2 gap-4 justify-between">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6! justify-items-center align-items-center">
           {itemList.map(item => <ItemCard item={item} type={slug}></ItemCard>)}
         </div>
       </div>
