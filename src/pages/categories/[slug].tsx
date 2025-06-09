@@ -1,6 +1,8 @@
 import { categories } from "@/data/categories";
 import { useRouter } from "next/router";
+import { Button } from "primereact/button";
 import { Card } from "primereact/card";
+import { Panel } from "primereact/panel";
 import { useEffect, useState } from "react";
 
 const categoryPage = () => {
@@ -12,12 +14,13 @@ const categoryPage = () => {
 
   useEffect(() => {
     const getItemList = async () => {
-      const res =await fetch(`https://valorant-api.com/v1/${slug}`)
-        .then((res) => res.json())
-      setItemList(res.data)
+      const res = await fetch(`https://valorant-api.com/v1/${slug}`).then(
+        (res) => res.json()
+      );
+      setItemList(res.data);
       console.log(itemList);
     };
-    getItemList()
+    //getItemList()
   }, []);
 
   const selectedCategory = categories.find(
@@ -26,9 +29,25 @@ const categoryPage = () => {
 
   return (
     <section className="min-h-[90dvh] bg-red-50 p-6 pt-22 bg-[url('/img/bg/plain_bg.png')] bg-cover bg-center flex flex-col justify-center items-center">
-      <Card className="flex flex-col items-center text-center w-[90dvw] h-[2000px]">
+      <div className="bg-white w-full p-4 flex flex-col col rounded-xl items-center justify-center  ">
         <h1 className="text-2xl">{selectedCategory?.name}</h1>
-      </Card>
+        <div className="w-full grid grid-cols-2 gap-x-4 justify-between">
+          <Card className="bg-gray-200! [&>div>div]:p-0! rounded-xl!">
+            <div className="flex flex-col gap-3 items-center">
+              <img
+                src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png"
+                className="bg-red-50 rounded-sm"
+                alt=""
+              />
+              <h3>Name</h3>
+              <Button
+                className="w-full bg-[var(--bright-red)]! text-sm!"
+                label="See more"
+              ></Button>
+            </div>
+          </Card>
+        </div>
+      </div>
     </section>
   );
 };
