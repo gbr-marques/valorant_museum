@@ -1,11 +1,24 @@
 import { categories } from "@/data/categories";
 import { useRouter } from "next/router";
 import { Card } from "primereact/card";
+import { useEffect, useState } from "react";
 
 const categoryPage = () => {
   const router = useRouter();
 
-  console.log(router.query.slug);
+  const { slug } = router.query;
+
+  const [itemList, setItemList] = useState([]);
+
+  useEffect(() => {
+    const getItemList = async () => {
+      const res =await fetch(`https://valorant-api.com/v1/${slug}`)
+        .then((res) => res.json())
+      setItemList(res.data)
+      console.log(itemList);
+    };
+    getItemList()
+  }, []);
 
   const selectedCategory = categories.find(
     (category) => category.slug === router.query.slug
