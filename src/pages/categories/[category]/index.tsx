@@ -1,5 +1,6 @@
 import ItemCard from "@/components/ItemCard";
 import { useCategories } from "@/hooks/useCategories";
+import { useItems } from "@/hooks/useItems";
 import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
@@ -9,21 +10,8 @@ import { useEffect, useState } from "react";
 const categoryPage = () => {
   const router = useRouter();
 
-  const { category } = router.query;
-
-  const [itemList, setItemList] = useState([]);
-
-  useEffect(() => {
-    const getItemList = async () => {
-      const res = await fetch(`https://valorant-api.com/v1/${category}`).then(
-        (res) => res.json()
-      );
-      setItemList(res.data);
-    };
-    getItemList()
-  }, []);
-
-  const categories = useCategories()
+  const items = useItems(router.query.category)
+  const categories = useCategories()  
 
   const selectedCategory = categories.find(
     (category) => category.slug === router.query.category
@@ -35,7 +23,7 @@ const categoryPage = () => {
         <h1 className="text-2xl rubik">{selectedCategory?.name}</h1>
         <p className="text-center">{selectedCategory?.description}</p>
         <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-items-center align-items-center">
-          {itemList.map(item => <ItemCard item={item} categoryType={category}></ItemCard>)}
+          {items.map(item => <ItemCard item={item} categoryType={category}></ItemCard>)}
         </div>
       </div>
     </section>
