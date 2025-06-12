@@ -6,7 +6,7 @@ const AgentLayout = () => {
     <>
       <h1 className="rubik text-2xl md:text-3xl w-full text-center md:text-start ">Gekko</h1>
       <section className="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
-        <aside className="md:min-w-[200px]">
+        <aside className="md:min-w-[200px] lg:min-w-[250px]">
           {" "}
           <div className="flex flex-col gap-3">
             {" "}
