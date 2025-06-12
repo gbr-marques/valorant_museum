@@ -6,7 +6,7 @@ const ItemCard = ({ item, categoryType }) => {
   const router = useRouter();
 
   return (
-    <Card className="bg-[var(--off-white)]! [&>div>div]:p-0! rounded-2xl! w-[150px]">
+    <Card className="bg-[var(--off-white)]! [&>div>div]:p-0! rounded-2xl! w-[150px] lg:w-full">
       <div className="flex flex-col gap-3 items-center">
           <img
             src={item.splash || item.displayIcon}

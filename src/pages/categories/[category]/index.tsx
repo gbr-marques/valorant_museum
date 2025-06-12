@@ -1,5 +1,5 @@
 import ItemCard from "@/components/ItemCard";
-import { categories } from "../../../../public/api/categories";
+import { useCategories } from "@/hooks/useCategories";
 import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
@@ -22,6 +22,8 @@ const categoryPage = () => {
     };
     getItemList()
   }, []);
+
+  const categories = useCategories()
 
   const selectedCategory = categories.find(
     (category) => category.slug === router.query.category
