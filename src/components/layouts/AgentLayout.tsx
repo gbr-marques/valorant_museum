@@ -1,7 +1,10 @@
 import { Divider } from "primereact/divider";
 import { Tag } from "primereact/tag";
 
-const AgentLayout = () => {
+const AgentLayout = ({ itemInfo }) => {
+
+  console.log(itemInfo);
+
   return (
     <>
       <h1 className="rubik text-2xl md:text-3xl w-full text-center md:text-start ">Gekko</h1>

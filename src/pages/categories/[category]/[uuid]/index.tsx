@@ -1,17 +1,17 @@
 import AgentLayout from "@/components/layouts/AgentLayout";
 import { useRouter } from "next/router";
 
-const ItemPage = () => {
+const ItemPage = ({data, category}) => {
   const router = useRouter();
 
-  console.log(router.query);
+  // console.log(router.query);
 
   const getItemLayout = () => {
-    const categoryType = router.query.category;
+    // const categoryType = router.query.category;
 
-    switch (categoryType) {
+    switch (category) {
       case "agents":
-        return <AgentLayout />;
+        return <AgentLayout itemInfo={data}/>;
 
       case "weapons":
         return <>Armas</>;
@@ -31,3 +31,31 @@ const ItemPage = () => {
 };
 
 export default ItemPage;
+
+
+export async function getServerSideProps(context) {
+  const { params } = context
+  const { category } = params
+  const { uuid } = params
+
+  try {
+    const res = await fetch(`https://valorant-api.com/v1/${category}/${uuid}`);
+    const { data } = await res.json();
+
+    return {
+      props: {
+        data,
+        category,
+      },
+    };
+  } catch (error) {
+    console.error("Erro ao buscar dados da API:", error);
+    return {
+      props: {
+        data: [],
+        category,
+      },
+    };
+  }
+
+}
