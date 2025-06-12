@@ -1,11 +1,17 @@
 import Image from "next/image";
 import { Card } from "primereact/card";
-import { categories } from "@/data/categories";
+// import { categories } from "../../../public/api/categories";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useCategories } from "@/hooks/useCategories";
 
 const CategoriesSection = () => {
   const router = useRouter();
+
+  const categories = useCategories()
+
+  console.log(categories);
+  
 
   const onCategoryClick = (categorySlug: string) => {
     router.push(`/categorias/` + categorySlug);

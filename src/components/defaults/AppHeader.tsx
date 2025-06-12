@@ -1,4 +1,4 @@
-import { categories } from "@/data/categories";
+import { categories } from "../../../public/api/categories";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Menubar } from "primereact/menubar";

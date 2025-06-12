@@ -1,5 +1,5 @@
 import ItemCard from "@/components/ItemCard";
-import { categories } from "@/data/categories";
+import { categories } from "../../../../public/api/categories";
 import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";

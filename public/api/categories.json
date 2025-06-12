@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Agents",
+    "icon": "/icons/agents.png",
+    "slug": "agents",
+    "description":
+      "Discover the unique abilities, personalities, and roles of every Agent in Valorant. Master their strengths and pick your perfect operative for battle."
+  },
+  {
+    "name": "Maps",
+    "icon": "/icons/maps.png",
+    "slug": "maps",
+    "description":
+      "Explore the iconic maps of Valorant, each with its own layout, lore, and tactical challenges. Learn the best spots, callouts, and strategies."
+  },
+  {
+    "name": "Weapons",
+    "icon": "/icons/weapons.png",
+    "slug": "weapons",
+    "description":
+      "Dive into the arsenal of Valorant, from deadly rifles to precise pistols. Compare stats and find the perfect weapon to match your playstyle."
+  },
+  {
+    "name": "Gamemodes",
+    "icon": "/icons/gamemodes.png",
+    "slug": "gamemodes",
+    "description":
+      "From competitive ranked to fun casual modes, discover everything Valorant has to offer in gameplay variety. Which mode suits you best?"
+  },
+  {
+    "name": "Player cards",
+    "icon": "/icons/playercards.png",
+    "slug": "playercards",
+    "description":
+      "Show off your personality with stylish player cards. Browse through the full collection and learn how to unlock your favorites."
+  },
+  {
+    "name": "Competitive Tiers",
+    "icon": "/icons/tiers.png",
+    "slug": "competitivetiers",
+    "description":
+      "Climb the ranks and prove your skills. Understand Valorant’s competitive tiers, from Iron to Radiant, and what it takes to rise."
+  },
+  {
+    "name": "Sprays",
+    "icon": "/icons/sprays.png",
+    "slug": "sprays",
+    "description":
+      "Add flair to your frags with expressive sprays. View every spray in the game and learn which ones are the most sought-after."
+  },
+  {
+    "name": "Bundles",
+    "icon": "/icons/bundles.png",
+    "slug": "bundles",
+    "description":
+      "Stay up to date with the latest skin bundles and themed collections in Valorant. Discover pricing, release dates, and exclusive cosmetics."
+  }
+]
