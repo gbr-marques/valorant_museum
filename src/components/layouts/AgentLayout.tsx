@@ -8,9 +8,9 @@ const AgentLayout = () => {
       <section className="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
         <aside className="md:min-w-[200px] lg:min-w-[250px]">
           {" "}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 overflow-clip ">
             {" "}
-            <div className="bg-linear-180 aspect-[3/4] from-[#C7F458] to-[#D56324] rounded-lg relative box-content">
+            <div className="bg-linear-180 aspect-[3/4] from-[#C7F458] to-[#D56324] rounded-lg relative box-content overflow-clip">
               <img
                 src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
                 alt=""
@@ -18,7 +18,7 @@ const AgentLayout = () => {
               />
               <img
                 src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/background.png"
-                className="opacity-20"
+                className="opacity-20 scale-170"
                 alt=""
               />
             </div>
