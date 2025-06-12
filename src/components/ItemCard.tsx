@@ -10,7 +10,7 @@ const ItemCard = ({ item, categoryType }) => {
       <div className="flex flex-col gap-3 items-center">
           <img
             src={item.splash || item.displayIcon}
-            className={`w-full rounded-md bg-linear-45 from-[var(--dark-red)] to-[var(--bright-red)] h-[110px] object-contain ${
+            className={`w-full rounded-md bg-linear-45 from-[var(--dark-red)] to-[var(--bright-red)] object-contain rat ${
               ["agents", "sprays", "bundles", "maps"].includes(categoryType) ? "p-0" : "p-2"
             } ${["bundles", "maps"].includes(categoryType) ? "object-cover" : ""}`}
             alt="a"
