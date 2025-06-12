@@ -6,17 +6,9 @@ import Link from "next/link";
 import { useCategories } from "@/hooks/useCategories";
 
 const CategoriesSection = () => {
-  const router = useRouter();
 
   const categories = useCategories()
-
-  console.log(categories);
   
-
-  const onCategoryClick = (categorySlug: string) => {
-    router.push(`/categorias/` + categorySlug);
-  };
-
   return (
     <section className="bg-[var(--off-white)] p-8 md:py-[3rem] lg:py-16 min-h-fit flex justify-center text-center">
       <div className="max-w-[1000px] flex flex-col justify-end gap-6">
