@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 
-const ItemCard = ({ item, type }) => {
+const ItemCard = ({ item, categoryType }) => {
   const router = useRouter();
 
   return (
@@ -11,15 +11,15 @@ const ItemCard = ({ item, type }) => {
           <img
             src={item.splash || item.displayIcon}
             className={`w-full rounded-md bg-linear-45 from-[var(--dark-red)] to-[var(--bright-red)] h-[110px] object-contain ${
-              ["agents", "sprays", "bundles", "maps"].includes(type) ? "p-0" : "p-2"
-            } ${["bundles", "maps"].includes(type) ? "object-cover" : ""}`}
+              ["agents", "sprays", "bundles", "maps"].includes(categoryType) ? "p-0" : "p-2"
+            } ${["bundles", "maps"].includes(categoryType) ? "object-cover" : ""}`}
             alt="a"
           />
         <h3 className="rubik text-center">{item.displayName}</h3>
         <Button
           className="w-full bg-[var(--light-steel)]! text-sm!"
           label="See more"
-          onClick={() => router.push(`${type}/${item.uuid}`)}
+          onClick={() => router.push(`${categoryType}/${item.uuid}`)}
         ></Button>
       </div>
     </Card>

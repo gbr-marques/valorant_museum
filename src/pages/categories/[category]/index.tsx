@@ -9,13 +9,13 @@ import { useEffect, useState } from "react";
 const categoryPage = () => {
   const router = useRouter();
 
-  const { slug } = router.query;
+  const { category } = router.query;
 
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
     const getItemList = async () => {
-      const res = await fetch(`https://valorant-api.com/v1/${slug}`).then(
+      const res = await fetch(`https://valorant-api.com/v1/${category}`).then(
         (res) => res.json()
       );
       setItemList(res.data);
@@ -24,7 +24,7 @@ const categoryPage = () => {
   }, []);
 
   const selectedCategory = categories.find(
-    (category) => category.slug === router.query.slug
+    (category) => category.slug === router.query.category
   );
 
   return (
@@ -33,7 +33,7 @@ const categoryPage = () => {
         <h1 className="text-2xl rubik">{selectedCategory?.name}</h1>
         <p className="text-center">{selectedCategory?.description}</p>
         <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-items-center align-items-center">
-          {itemList.map(item => <ItemCard item={item} type={slug}></ItemCard>)}
+          {itemList.map(item => <ItemCard item={item} categoryType={category}></ItemCard>)}
         </div>
       </div>
     </section>

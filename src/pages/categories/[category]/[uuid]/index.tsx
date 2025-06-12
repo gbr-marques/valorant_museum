@@ -7,7 +7,7 @@ const ItemPage = () => {
   console.log(router.query);
 
   const getItemLayout = () => {
-    const categoryType = router.query.slug;
+    const categoryType = router.query.category;
 
     switch (categoryType) {
       case "agents":
@@ -28,7 +28,6 @@ const ItemPage = () => {
       </div>
     </section>
   );
-
 };
 
 export default ItemPage;
