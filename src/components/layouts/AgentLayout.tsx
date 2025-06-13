@@ -2,25 +2,26 @@ import { Divider } from "primereact/divider";
 import { Tag } from "primereact/tag";
 
 const AgentLayout = ({ itemInfo }) => {
-
   console.log(itemInfo);
 
   return (
     <>
-      <h1 className="rubik text-2xl md:text-3xl w-full text-center md:text-start ">Gekko</h1>
+      <h1 className="rubik text-2xl md:text-3xl w-full text-center md:text-start">
+        {itemInfo.displayName}
+      </h1>
       <section className="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
         <aside className="md:min-w-[200px] lg:min-w-[250px]">
-          {" "}
           <div className="flex flex-col gap-3 overflow-clip ">
-            {" "}
-            <div className="bg-linear-180 aspect-[3/4] from-[#C7F458] to-[#D56324] rounded-lg relative box-content overflow-clip">
+            <div
+              className={`bg-linear-180 aspect-[3/4] from-[#${itemInfo.backgroundGradientColors[0]}] to-[#${itemInfo.backgroundGradientColors[2]}] rounded-lg relative box-content overflow-clip`}
+            >
               <img
-                src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
+                src={itemInfo.fullPortrait}
                 alt=""
                 className="absolute bottom-0 left-[50%] translate-x-[-50%] h-full z-10 min-w-fit"
               />
               <img
-                src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/background.png"
+                src={itemInfo.background}
                 className="opacity-20 scale-170"
                 alt=""
               />
@@ -29,11 +30,11 @@ const AgentLayout = ({ itemInfo }) => {
               <ul className="text-start flex flex-col gap-1">
                 <li>
                   <span className="rubik font-bold">Developer's name:</span>{" "}
-                  Aggrobot
+                  {itemInfo.developerName}
                 </li>
                 <li>
                   <span className="rubik font-bold">Release date:</span>{" "}
-                  01/01/2018
+                  {itemInfo.releaseDate}
                 </li>
                 <li className="flex flex-wrap gap-2 items-center">
                   <span className="rubik font-bold">Tags:</span>{" "}
@@ -64,74 +65,13 @@ const AgentLayout = ({ itemInfo }) => {
         </aside>
         <div>
           <div className="flex flex-col gap-3">
-            <p className="text-[14px] leading-tight">
-              Gekko the Angeleno leads a tight-knit crew of calamitous
-              creatures. His buddies bound forward, scattering enemies out of
-              the way, with Gekko chasing them down to regroup and go again.
-            </p>
+            <p className="text-[14px] leading-tight">{itemInfo.description}</p>
             <Divider className="m-0!"></Divider>
             <h3 className="rubik text-2xl w-full">Abilities</h3>
             <ul className="grid grid-cols-1 lg:grid-cols-2 w-full gap-3">
-              <li className="bg-[var(--off-white)] p-3 rounded-lg flex flex-col gap-3">
-                <div className="flex gap-2 items-center">
-                  <img
-                    className="h-[28px] bg-linear-45 from-[var(--dark-red)] to-[var(--bright-red)] rounded-sm p-1"
-                    src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ultimate/displayicon.png"
-                    alt=""
-                  />
-                  <h3 className="rubik text-lg">Wingman</h3>
-                </div>
-                <p className="text-[14px] leading-tight">
-                  EQUIP Wingman. FIRE to send Wingman forward seeking enemies.
-                  Wingman unleashes a concussive blast toward the first enemy he
-                  sees. ALT FIRE when targeting a Spike site or planted Spike to
-                  have Wingman defuse or plant the Spike. To plant, Gekko must
-                  have the Spike in his inventory. When Wingman expires he
-                  reverts into a dormant globule. INTERACT to reclaim the
-                  globule and gain another Wingman charge after a short
-                  cooldown.
-                </p>
-              </li>
-              <li className="bg-[var(--off-white)] p-3 rounded-lg flex flex-col gap-3">
-                <div className="flex gap-2 items-center">
-                  <img
-                    className="h-[28px] bg-linear-45 from-[var(--dark-red)] to-[var(--bright-red)] rounded-sm p-1"
-                    src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ultimate/displayicon.png"
-                    alt=""
-                  />
-                  <h3 className="rubik text-lg">Wingman</h3>
-                </div>
-                <p className="text-[14px] leading-tight">
-                  EQUIP Wingman. FIRE to send Wingman forward seeking enemies.
-                  Wingman unleashes a concussive blast toward the first enemy he
-                  sees. ALT FIRE when targeting a Spike site or planted Spike to
-                  have Wingman defuse or plant the Spike. To plant, Gekko must
-                  have the Spike in his inventory. When Wingman expires he
-                  reverts into a dormant globule. INTERACT to reclaim the
-                  globule and gain another Wingman charge after a short
-                  cooldown.
-                </p>
-              </li>
-              <li className="bg-[var(--off-white)] p-3 rounded-lg flex flex-col gap-3">
-                <div className="flex gap-2 items-center">
-                  <img
-                    className="h-[28px] bg-linear-45 from-[var(--dark-red)] to-[var(--bright-red)] rounded-sm p-1"
-                    src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ultimate/displayicon.png"
-                    alt=""
-                  />
-                  <h3 className="rubik text-lg">Wingman</h3>
-                </div>
-                <p className="text-[14px] leading-tight">
-                  EQUIP Wingman. FIRE to send Wingman forward seeking enemies.
-                  Wingman unleashes a concussive blast toward the first enemy he
-                  sees. ALT FIRE when targeting a Spike site or planted Spike to
-                  have Wingman defuse or plant the Spike. To plant, Gekko must
-                  have the Spike in his inventory. When Wingman expires he
-                  reverts into a dormant globule. INTERACT to reclaim the
-                  globule and gain another Wingman charge after a short
-                  cooldown.
-                </p>
-              </li>
+              {itemInfo.abilities.map((ability) => {
+                <>a</>;
+              })}
             </ul>
           </div>
         </div>
