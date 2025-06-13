@@ -76,8 +76,8 @@ const AppHeader = () => {
       <div className="lg:w-full lg:max-w-[1000px]">
         <Image
           className="max-h-[60px] lg:w-[200px]"
-          width={100}
-          height={100}
+          width={80}
+          height={80}
           src={"/img/app_logo.svg"}
           alt="Valorant Museum logo"
         ></Image>
