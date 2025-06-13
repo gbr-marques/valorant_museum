@@ -3,9 +3,9 @@ import { Tag } from "primereact/tag";
 
 const AgentLayout = ({ itemInfo }) => {
   console.log(itemInfo);
-  
- // const colorFrom = `from-[#${itemInfo.backgroundGradientColors[0].slice(0,6)}]`
-// const colorTo = `to-[#${itemInfo.backgroundGradientColors[1].slice(0,6)}]`
+
+  // const colorFrom = `from-[#${itemInfo.backgroundGradientColors[0].slice(0,6)}]`
+  // const colorTo = `to-[#${itemInfo.backgroundGradientColors[1].slice(0,6)}]`
 
   return (
     <>
@@ -14,7 +14,7 @@ const AgentLayout = ({ itemInfo }) => {
         {/* {itemInfo.displayName} {itemInfo.backgroundGradientColors[1]} */}
       </h1>
       <section className="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
-        <aside className="md:min-w-[200px] lg:min-w-[250px]">
+        <aside className="md:min-w-[200px] lg:min-w-[200px]">
           <div className="flex flex-col gap-3 overflow-clip ">
             <div
               className={`bg-linear-180 aspect-[3/4] rounded-lg relative box-content overflow-clip`}
@@ -80,10 +80,21 @@ const AgentLayout = ({ itemInfo }) => {
             <p className="text-[14px] leading-tight">{itemInfo.description}</p>
             <Divider className="m-0!"></Divider>
             <h3 className="rubik text-2xl w-full">Abilities</h3>
+
             <ul className="grid grid-cols-1 lg:grid-cols-2 w-full gap-3">
-              {itemInfo.abilities.map((ability) => {
-                <>a</>;
-              })}
+              {itemInfo.abilities.map((ab) => (
+                <li className="bg-[var(--off-white)] p-3 rounded-lg flex flex-col gap-3 max-h-[200px]">
+                  <div className="flex gap-2 items-center">
+                    <img
+                      className="h-[28px] bg-linear-45 from-[var(--dark-red)] to-[var(--bright-red)] rounded-sm p-1"
+                      src={ab.displayIcon}
+                      alt=""
+                    />
+                    <h3 className="rubik text-lg">{ab.displayName}</h3>
+                  </div>
+                  <p className="text-[14px] leading-tight line-clamp-4">{ab.description}</p>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
