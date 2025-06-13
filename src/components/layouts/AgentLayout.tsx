@@ -3,17 +3,29 @@ import { Tag } from "primereact/tag";
 
 const AgentLayout = ({ itemInfo }) => {
   console.log(itemInfo);
+  
+ // const colorFrom = `from-[#${itemInfo.backgroundGradientColors[0].slice(0,6)}]`
+// const colorTo = `to-[#${itemInfo.backgroundGradientColors[1].slice(0,6)}]`
 
   return (
     <>
       <h1 className="rubik text-2xl md:text-3xl w-full text-center md:text-start">
         {itemInfo.displayName}
+        {/* {itemInfo.displayName} {itemInfo.backgroundGradientColors[1]} */}
       </h1>
       <section className="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
         <aside className="md:min-w-[200px] lg:min-w-[250px]">
           <div className="flex flex-col gap-3 overflow-clip ">
             <div
-              className={`bg-linear-180 aspect-[3/4] from-[#${itemInfo.backgroundGradientColors[0]}] to-[#${itemInfo.backgroundGradientColors[2]}] rounded-lg relative box-content overflow-clip`}
+              className={`bg-linear-180 aspect-[3/4] rounded-lg relative box-content overflow-clip`}
+              style={
+                {
+                  "--tw-gradient-from": `#${itemInfo.backgroundGradientColors[0]}`,
+                  "--tw-gradient-to": `#${itemInfo.backgroundGradientColors[1]}`,
+                  "--tw-gradient-stops":
+                    "var(--tw-gradient-from), var(--tw-gradient-to)",
+                } as React.CSSProperties
+              }
             >
               <img
                 src={itemInfo.fullPortrait}
@@ -22,7 +34,7 @@ const AgentLayout = ({ itemInfo }) => {
               />
               <img
                 src={itemInfo.background}
-                className="opacity-20 scale-170"
+                className="opacity-20 scale-200"
                 alt=""
               />
             </div>

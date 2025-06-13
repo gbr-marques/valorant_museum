@@ -1,0 +1,1 @@
+export const apiURL = "https://valorant-api.com/v1"
