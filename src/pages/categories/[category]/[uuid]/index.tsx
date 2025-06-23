@@ -1,4 +1,5 @@
 import AgentLayout from "@/components/layouts/AgentLayout";
+import MapLayout from "@/components/layouts/MapLayout";
 import { useRouter } from "next/router";
 
 const ItemPage = ({data, category}) => {
@@ -17,7 +18,7 @@ const ItemPage = ({data, category}) => {
         return <>Armas</>;
 
       case "maps":
-        return <>Mapas</>;
+        return <MapLayout itemInfo={data} />;
     }
   };
 
@@ -50,12 +51,12 @@ export async function getServerSideProps(context) {
     };
   } catch (error) {
     console.error("Erro ao buscar dados da API:", error);
-    return {
-      props: {
-        data: [],
-        category,
-      },
-    };
+    // return {
+    //   props: {
+    //     data: [],
+    //     category,
+    //   },
+    // };
   }
 
 }
