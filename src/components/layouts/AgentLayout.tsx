@@ -14,7 +14,7 @@ const AgentLayout = ({ itemInfo }) => {
         {/* {itemInfo.displayName} {itemInfo.backgroundGradientColors[1]} */}
       </h1>
       <section className="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
-        <aside className="md:min-w-[200px] lg:min-w-[200px]">
+        <aside className="md:min-w-[200px] lg:min-w-[250px]">
           <div className="flex flex-col gap-3 overflow-clip ">
             <div
               className={`bg-linear-180 aspect-[3/4] rounded-lg relative box-content overflow-clip`}
