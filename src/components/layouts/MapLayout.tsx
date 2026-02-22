@@ -2,7 +2,7 @@ import { Divider } from "primereact/divider";
 import { Tag } from "primereact/tag";
 
 const MapLayout = ({ itemInfo }) => {
-  console.log(itemInfo.itemInfo);
+  console.log(itemInfo);
 
   return (
     <>
@@ -78,7 +78,7 @@ const MapLayout = ({ itemInfo }) => {
                 backgroundPosition: "center",
               }}
             >
-              <img src={itemInfo.displayIcon} className="max-h-[400px]" />
+              <img src={itemInfo.displayIcon} className="max-h-[400px]"></img>
             </div>
           </div>
         </div>
