@@ -72,7 +72,7 @@ const AppHeader = () => {
   //   ];
 
   return (
-    <nav className="w-full flex items-center justify-center lg:justify-start xl:justify-center absolute h-fit p-8">
+    <nav className="min-h-[10dvh] w-full flex items-center justify-center lg:justify-start xl:justify-center absolute h-fit p-8">
       <div className="lg:w-full lg:max-w-[1000px]">
         <Image
           className="max-h-[60px] lg:w-[200px]"
