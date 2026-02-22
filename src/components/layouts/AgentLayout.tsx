@@ -1,3 +1,4 @@
+import moment from "moment";
 import { Divider } from "primereact/divider";
 import { Tag } from "primereact/tag";
 
@@ -46,7 +47,7 @@ const AgentLayout = ({ itemInfo }) => {
                 </li>
                 <li>
                   <span className="rubik font-bold">Release date:</span>{" "}
-                  {itemInfo.releaseDate}
+                  {moment(itemInfo.releaseDate).format('d/MM/yyyy')}
                 </li>
                 <li className="flex flex-wrap gap-2 items-center">
                   <span className="rubik font-bold">Tags:</span>{" "}
